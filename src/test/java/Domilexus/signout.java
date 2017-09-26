@@ -11,22 +11,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class Login extends Domilexus.TestBase {
+public class signout extends Domilexus.TestBase {
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
-	
-  
   WebDriver driver = new ChromeDriver();
-  
   @Test
-  public void testLogin() throws Exception {
+  public void testUntitled() throws Exception {
 	  String baseUrl = "http://localhost";
-	driver.get(baseUrl + "/php4dvd/");
-    driver.findElement(By.id("username")).clear();
-    driver.findElement(By.id("username")).sendKeys("admin");
-    driver.findElement(By.name("password")).clear();
-    driver.findElement(By.name("password")).sendKeys("admin");
-    driver.findElement(By.name("submit")).click();
+    driver.get(baseUrl + "/php4dvd/");
+    driver.findElement(By.linkText("Log out")).click();
+    assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to log out[\\s\\S]$"));
   }
 
   private boolean isElementPresent(By by) {
