@@ -14,14 +14,13 @@ import org.openqa.selenium.support.ui.Select;
 public class Login extends Domilexus.TestBase {
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
-
-	WebDriver driver = new ChromeDriver();
+	
+  
+  WebDriver driver = new ChromeDriver();
+  
   @Test
   public void testLogin() throws Exception {
-	 
-	System.setProperty("webdriver.chrome.driver", "D:\\DEV\\chromedriver.exe");
-
-	String baseUrl = "https://localhost";
+	String baseUrl = "http://localhost";
 	driver.get(baseUrl + "/php4dvd/");
     driver.findElement(By.id("username")).clear();
     driver.findElement(By.id("username")).sendKeys("admin");
@@ -31,7 +30,6 @@ public class Login extends Domilexus.TestBase {
   }
 
   private boolean isElementPresent(By by) {
-
     try {
       driver.findElement(by);
       return true;
@@ -41,7 +39,6 @@ public class Login extends Domilexus.TestBase {
   }
 
   private String closeAlertAndGetItsText() {
-
     try {
       Alert alert = driver.switchTo().alert();
       String alertText = alert.getText();
