@@ -1,6 +1,7 @@
 package Domilexus;
 
 import java.util.regex.Pattern;
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 import org.testng.*;
 import org.testng.annotations.*;
@@ -15,8 +16,18 @@ public class Login extends Domilexus.TestBase {
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
 	
-  
-  WebDriver driver = new ChromeDriver();
+  @BeforeSuite
+  public void SetBrowser(){
+	  File file = new File("C:/chromedriver.exe");
+      System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
+      WebDriver driver = new ChromeDriver();
+      String baseUrl = "http://localhost";
+      String ExpTitle = "Welcome: Mercury Tours";
+  }
+
+   
+    
+
   
   @Test
   public void testLogin() throws Exception {

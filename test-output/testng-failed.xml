@@ -3,11 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="Domilexus.signout">
+      <class name="Domilexus.Login">
         <methods>
-          <include name="testUntitled"/>
+          <include name="testLogin"/>
+          <include name="SetBrowser"/>
         </methods>
-      </class> <!-- Domilexus.signout -->
+      </class> <!-- Domilexus.Login -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
