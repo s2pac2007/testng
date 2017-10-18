@@ -1,10 +1,11 @@
 package Domilexus;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 import org.testng.*;
 import org.testng.annotations.*;
-import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -20,7 +21,7 @@ public class signout extends Domilexus.TestBase {
 	  String baseUrl = "http://localhost";
     driver.get(baseUrl + "/php4dvd/");
     driver.findElement(By.linkText("Log out")).click();
-    assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to log out[\\s\\S]$"));
+    AssertJUnit.assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to log out[\\s\\S]$"));
   }
 
   private boolean isElementPresent(By by) {

@@ -1,5 +1,6 @@
 package Domilexus;
 
+import org.testng.annotations.AfterMethod;
 import java.io.IOException;
 import java.net.URL;
 
@@ -38,7 +39,8 @@ public class TestNgTestBase {
     driver = WebDriverPool.DEFAULT.getDriver(gridHubUrl, capabilities);
   }
 
-  @AfterSuite(alwaysRun = true)
+  @AfterMethod
+@AfterSuite(alwaysRun = true)
   public void tearDown() {
     WebDriverPool.DEFAULT.dismissAll();
   }

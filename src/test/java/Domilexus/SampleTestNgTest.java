@@ -1,5 +1,7 @@
 package Domilexus;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.openqa.selenium.support.PageFactory;
 
 import org.testng.Assert;
@@ -20,6 +22,6 @@ public class SampleTestNgTest extends TestNgTestBase {
   @Test
   public void testHomePageHasAHeader() {
     driver.get(baseUrl);
-    Assert.assertFalse("".equals(homepage.header.getText()));
+    AssertJUnit.assertFalse("".equals(homepage.header.getText()));
   }
 }
