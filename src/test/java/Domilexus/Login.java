@@ -16,7 +16,7 @@ import org.openqa.selenium.support.ui.Select;
 public class Login extends Domilexus.TestBase {
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
-	
+  private WebDriver driver = new ChromeDriver();	
   @BeforeSuite
   public void SetBrowser(){
 	  File file = new File("./chromedriver.exe");
@@ -26,7 +26,7 @@ public class Login extends Domilexus.TestBase {
 
     public void testLogin() throws Exception {
 	  String baseUrl = "http://localhost";
-      WebDriver driver = new ChromeDriver();
+
 	driver.get(baseUrl + "/php4dvd/");
     driver.findElement(By.id("username")).clear();
     driver.findElement(By.id("username")).sendKeys("admin");

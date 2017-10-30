@@ -3,6 +3,21 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
+      <class name="Domilexus.SampleTestNgTest">
+        <methods>
+          <include name="testHomePageHasAHeader"/>
+          <include name="initPageObjects"/>
+          <include name="initTestSuite"/>
+          <include name="initWebDriver"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- Domilexus.SampleTestNgTest -->
+      <class name="Domilexus.Login">
+        <methods>
+          <include name="testLogin"/>
+          <include name="SetBrowser"/>
+        </methods>
+      </class> <!-- Domilexus.Login -->
       <class name="Domilexus.signout">
         <methods>
           <include name="testUntitled"/>

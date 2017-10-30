@@ -1,0 +1,8 @@
+Domilexus\pages\Page.class
+Domilexus\Login.class
+Domilexus\pages\HomePage.class
+Domilexus\TestBase.class
+Domilexus\signout.class
+Domilexus\SuiteConfiguration.class
+Domilexus\SampleTestNgTest.class
+Domilexus\TestNgTestBase.class
