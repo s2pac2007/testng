@@ -3,7 +3,7 @@
 <suite name="Tests" verbose="5">
   <test name="Test1">
     <classes>
-      <class name="Domilexus.Login"/>
+	<class name="Domilexus.idupeshcomvideo"/>     
     </classes>
   </test>  
 </suite>

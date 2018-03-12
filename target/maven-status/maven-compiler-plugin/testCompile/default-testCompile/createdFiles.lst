@@ -2,6 +2,7 @@ Domilexus\pages\Page.class
 Domilexus\Login.class
 Domilexus\pages\HomePage.class
 Domilexus\TestBase.class
+Domilexus\idupeshcomvideo.class
 Domilexus\signout.class
 Domilexus\SuiteConfiguration.class
 Domilexus\SampleTestNgTest.class
